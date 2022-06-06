@@ -8,14 +8,7 @@ function App() {
           Gerador de link do whatsapp __
         </h1>
       </header>
-      <body>
         <Home />
-      </body>
-      <footer>
-        <div className="text-center p-5">
-          <p> Gerador de link do whatsApp - 2022 </p>{" "}
-        </div>
-      </footer>
     </div>
   );
 }
