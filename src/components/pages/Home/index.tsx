@@ -5,11 +5,10 @@ import { Button, FormGroup, Label, Row, Col, Container } from "reactstrap";
 import { Inputs } from "./types";
 
 const Home = () => {
-  const [link, setLink] = useState<any>(null);
+  const [link, setLink] = useState<string>();
   const { register, handleSubmit } = useForm<Inputs>();
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
-    console.log(data);
     const resultLink =
       `https://api.whatsapp.com/send?phone=55${data.telephone}&text=${data.message}`.replace(
         " ",
@@ -21,7 +20,7 @@ const Home = () => {
   return (
     <Container>
       <Row>
-        <Col className="bg-success text-white text-center">
+        <Col className="bg-success text-white text-center rounded">
           <Row className="mt-5">
             <h2>Como Funciona?</h2>
             <ul className="mt-2">
@@ -33,7 +32,7 @@ const Home = () => {
           </Row>
         </Col>
         <Col className="">
-          <form className="mt-5" onSubmit={handleSubmit(onSubmit)}>
+          <form className="mt-4" onSubmit={handleSubmit(onSubmit)}>
             <FormGroup row>
               <Label for="telephone" sm={2}>
                 Telefone
@@ -47,6 +46,7 @@ const Home = () => {
                   id="telephone"
                   name="telephone"
                   placeholder="(DDD) xxxx-xxxx"
+                  required
                 />
               </Col>
             </FormGroup>
@@ -62,6 +62,7 @@ const Home = () => {
                   id="message"
                   name="message"
                   placeholder="Olá!"
+                  required
                 />
               </Col>
             </FormGroup>
@@ -82,7 +83,7 @@ const Home = () => {
             </FormGroup>
             <Row>
               <Col>
-                <div>
+                <div className="d-flex flex-row-reverse">
                   <Button
                     type="submit"
                     aria-label="Gerador de link"
