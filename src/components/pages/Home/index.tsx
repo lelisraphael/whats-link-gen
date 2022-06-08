@@ -23,10 +23,21 @@ const Home = () => {
         <Col className="bg-success text-white text-center rounded">
           <Row className="mt-5">
             <h2>Como Funciona?</h2>
+            <p>
+              O gerador de links do whatsapp, é uma ferramenta gratuita que
+              permite você gerar links a partir do telefone do seu négocio e de
+              uma mensagem personalizada para inserir um link direto do whatsapp
+              direto no seu site ou blog.
+            </p>
+
+            <h3>Para começar siga os passos:</h3>
             <ul className="mt-2">
               <p> 1. Insira seu telefone. </p>
               <p> 2. Insira uma mensagem.</p>
-              <p> 3. Clique em "Gerar Link". </p>
+              <p>
+                {" "}
+                3. Clique em <strong>"Gerar Link"</strong>.{" "}
+              </p>
               <p> 4. Pronto! Basta copiar o link e utilizar! </p>
             </ul>
           </Row>
